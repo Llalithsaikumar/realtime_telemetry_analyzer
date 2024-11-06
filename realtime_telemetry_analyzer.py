@@ -147,7 +147,7 @@ class RoboticTelemetryAnalyzer:
         plt.pause(0.1)
         
     def _run_analysis_loop(self):
-        """Main analysis loop for real-time data"""
+
         last_update = time.time()
         
         self.fig, self.axes = self._create_real_time_plot()
@@ -195,7 +195,6 @@ class RoboticTelemetryAnalyzer:
             
     @keyword('Get Latest Analysis Results')
     def get_latest_results(self):
-        """Get the most recent analysis results"""
         if not self.analysis_results.empty():
             return self.analysis_results.get()
         return None
